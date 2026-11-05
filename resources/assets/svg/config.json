@@ -307,7 +307,7 @@
           "source_path": "packages/radix-icons/icons",
           "_version_note": "archive tag is website@0.0.17; the icons package inside it is 1.3.2"
         },
-        "current_version": "1.3.2",
+        "current_version": "0.0.17",
         "ref": "tag website@0.0.17 (bde33b13aa), packages/radix-icons 1.3.2",
         "version_check_url": "https://api.github.com/repos/radix-ui/icons/tags",
         "license": {
@@ -1008,8 +1008,8 @@
     },
     "update_command": {
       "type": "recipe",
-      "recipe": "manifest-pack",
-      "_note": "icon-sets-sync has no config for this pack yet. Its manifest-pack recipe refreshes npm-sourced sets only; the github-archive sets (radix-icons, iconpark, mingcute, coolicons, fluent-emoji, game-icons, svg-logos, noto-emoji) need it extended."
+      "recipe": "icon-sets-extras.<set>",
+      "_note": "Each set has its own icon-sets-sync recipe, icon-sets-extras.<set> (icon-sets-sync#88), which refreshes files/<set>/ and licenses/<set>/ and stamps upstream.sets.<set>.current_version."
     }
   },
   "license": {
