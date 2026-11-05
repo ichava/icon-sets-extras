@@ -1,7 +1,7 @@
 {
     "name": "ichava/icon-sets-extras",
     "description": "43,561 SVGs from 20 open-licence icon, logo and emoji sets (MIT, Apache-2.0, CC0, CC BY), one directory per set, for Laravel 13 on the Ichava icon ecosystem.",
-    "type": "library",
+    "type": "ichava-icon-set",
     "keywords": [
         "laravel",
         "blade",
@@ -23,9 +23,7 @@
     ],
     "require": {
         "php": "^8.4.1 || ^8.5",
-        "illuminate/support": "^13.0",
-        "ichava/core": "^0.1",
-        "laranail/package-tools": "^0.1.0"
+        "ichava/core": "^0.1"
     },
     "repositories": [
         {
