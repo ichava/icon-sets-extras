@@ -44,10 +44,10 @@ function extras_licence_hashes(): array
  * deletes that directory and writes upstream's licence files back under their
  * upstream names on every real sync, so anything else there would be lost and a
  * renamed file would be written back under upstream's name. The three sets whose npm package
- * ships no licence (ant-design, eva, pepicons) are not covered yet: the sink deletes
- * their directory on a real sync unless it holds a SOURCE.md, and that marker is
- * still to be added. Names here are what a dry run of each
- * set's recipe reports as would_write (icon-sets-sync 06b17d7, 2026-11-04).
+ * ships no licence (ant-design, eva, pepicons) hold a hand-supplied text beside a
+ * source.md, which makes the sink keep the directory as it is (icon-sets-sync
+ * cbebf08 and later). Names here are what a dry run of each set's recipe reports as
+ * would_write, plus that marker for the three (2026-11-04).
  *
  * @return array<string, list<string>>
  */
@@ -63,12 +63,12 @@ function extras_licence_files(): array
         'siemens-ix'   => ['LICENSE.md'],
         'garden'       => ['LICENSE.md'],
         'coolicons'    => ['LICENSE'],
-        'eva'          => ['LICENSE'],
-        'ant-design'   => ['LICENSE'],
+        'eva'          => ['LICENSE', 'source.md'],
+        'ant-design'   => ['LICENSE', 'source.md'],
         'health-icons' => ['LICENSE'],
         'devicon'      => ['LICENSE'],
         'fluent-emoji' => ['LICENSE'],
-        'pepicons'     => ['LICENSE'],
+        'pepicons'     => ['LICENSE', 'source.md'],
         'game-icons'   => ['license.txt'],
         'coreui'       => ['LICENSE'],
         'pinhead'      => ['LICENSE'],
@@ -129,6 +129,32 @@ it(description: 'keeps exactly the files a sync writes in each licence directory
 
         expect($files)->toBe($expected, "licenses/{$set}/ holds a file a sync would delete or rename");
         expect(basename(extras_config()['upstream']['sets'][$set]['license']['file']))->toBeIn($expected);
+    }
+});
+
+/** @return list<string> sets whose npm package ships no licence, so the text is hand-supplied */
+function extras_hand_supplied_sets(): array
+{
+    return ['ant-design', 'eva', 'pepicons'];
+}
+
+it(description: 'marks every hand-supplied licence with a source.md that records its text', closure: function () {
+    // Without the marker, a real sync deletes the directory: the npm package
+    // ships no licence, so the sink would have nothing to write back.
+    expect(extras_hand_supplied_sets())->toHaveCount(3);
+
+    foreach (extras_hand_supplied_sets() as $set) {
+        $dir = extras_root() . "/resources/assets/svg/licenses/{$set}";
+        // Exact names from the directory listing: is_file() would accept any
+        // casing on a case-insensitive filesystem, and the sink does not.
+        $names = scandir($dir) ?: [];
+        expect(in_array('source.md', $names, true))->toBeTrue("licenses/{$set}/source.md is missing; a sync would delete the hand-supplied text");
+        expect(in_array('LICENSE', $names, true))->toBeTrue("licenses/{$set}/LICENSE is missing");
+
+        $marker = (string) file_get_contents("{$dir}/source.md");
+        expect($marker)->toContain('`LICENSE`')
+            ->and($marker)->toContain((string) hash_file('sha256', "{$dir}/LICENSE"))
+            ->and($marker)->toContain(extras_licence_hashes()[$set]);
     }
 });
 
