@@ -26,6 +26,16 @@ dropped for its CC BY-SA icons.
   licence. The credit lines are in `ATTRIBUTION.md`, one per set, and one per contributor for Game
   Icons.
 
+## Pepicons and its commercial-use request
+
+All three Pepicons variants in this pack (Pop!, Print and Pencil, the `-pop`, `-print` and
+`-pencil` files) are CC BY 4.0: they come from one npm package, `pepicons` 3.1.6, whose `license`
+field names CC BY 4.0, under one repository `LICENSE` holding the CC BY 4.0 legal code. Upstream's
+root README also asks commercial users to buy a licence through a one-time GitHub sponsorship. That
+sentence is not in the licence file or the npm package, and CC BY 4.0 is irrevocable and has no
+non-commercial limit, so it is a request, not a condition. `ATTRIBUTION.md` quotes it in full,
+with the sources and the date they were read.
+
 ## Trademarks
 
 Devicon, SVG Logos and the Boxicons `bxl-` logos depict brands. Their licences cover the drawings, not the marks; a brand's own rules

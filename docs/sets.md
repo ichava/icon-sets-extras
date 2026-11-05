@@ -22,7 +22,7 @@ records each set's upstream, pinned version and licence under `upstream.sets`.
 | `health-icons` | Health Icons | 1,552 | 48×48, outline and filled | CC0-1.0 |
 | `devicon` | Devicon | 2,120 | 128×128 logos; original, plain, line and wordmark | MIT |
 | `fluent-emoji` | Fluent Emoji | 4,740 | flat and high-contrast, with skin tones | MIT |
-| `pepicons` | Pepicons | 3,825 | 20×20; pop, print and pencil | CC BY 4.0 |
+| `pepicons` | Pepicons | 3,825 | 20×20; pop, print and pencil, all three CC BY 4.0 | CC BY 4.0 |
 | `game-icons` | Game Icons | 4,178 | 512×512, white on a black square | CC BY 3.0 |
 | `coreui` | CoreUI Icons Free | 562 | 512×512 line icons | CC BY 4.0 |
 | `pinhead` | Pinhead | 2,747 | 15×15 map icons | CC0-1.0 |

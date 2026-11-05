@@ -1145,7 +1145,23 @@ The Color style (3,145 files, 132 MB of gradients) and the 3D PNGs are not vendo
 - **Upstream**: [https://pepicons.com](https://pepicons.com), source [github.com/CyCraft/pepicons](https://github.com/CyCraft/pepicons)
 - **Author**: CyCraft
 - **Vendored**: npm pepicons 3.1.6 (tag v3.1.6); laid out as svg/{pop,print,pencil} flattened to <name>-pop / -print / -pencil
-- **Licence**: CC BY 4.0, `resources/assets/svg/licenses/pepicons/LICENSE`, read from LICENSE at tag v3.1.6 (the npm package ships none) on 2026-11-04, SHA-256 `dbb19cb7bda19afef40f19094a668dfe61375cfd57c49d33c660bdb76676b5c5`
+- **Licence**: CC BY 4.0, `resources/assets/svg/licenses/pepicons/LICENSE`, read from LICENSE at tag v3.1.6 (the npm package ships none) on 2026-11-04, SHA-256 `dbb19cb7bda19afef40f19094a668dfe61375cfd57c49d33c660bdb76676b5c5`; re-read on 2026-11-05, unchanged at tag v3.1.6 and on `main`
+
+**Licence per variant.** All three variants come from the same npm package and the same repository, and none has terms of its own:
+
+| Variant | Files | Licence | Where upstream says so |
+|---|---:|---|---|
+| Pop! (`-pop`) | 1,275 | CC BY 4.0 | repository `LICENSE` (unchanged since 2021-07-27); npm `pepicons` 3.1.6 `license` field |
+| Print (`-print`) | 1,275 | CC BY 4.0 | repository `LICENSE` (unchanged since 2021-07-27); npm `pepicons` 3.1.6 `license` field |
+| Pencil (`-pencil`) | 1,275 | CC BY 4.0 | repository `LICENSE` (unchanged since 2021-07-27); npm `pepicons` 3.1.6 `license` field |
+
+**Upstream's commercial-use request.** Since 2022-09-09 the repository's root README has opened its License section with: "For commercial use please purchase a License at: https://github.com/sponsors/mesqueeb?frequency=one-time". That sentence is a request beside the licence, not a term of it:
+
+- It appears in neither the `LICENSE` file nor the npm package. `LICENSE` is the Creative Commons Attribution 4.0 legal code, word for word, under the line `Pepicons by © Copyright CyCraft, 2019 - today`; the README shipped inside the npm package (`packages/pepicons/README.md`) states CC BY 4.0 without the sentence; the package's `license` field reads `CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE`.
+- The same README section goes on to say the set "falls under CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE".
+- CC BY 4.0 grants its licence "worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable" (Section 2(a)(1)), with no non-commercial limit, and Section 7(b) treats any arrangement not stated in the licence as separate from and independent of it.
+
+So commercial use of the icons shipped here is licensed under CC BY 4.0, on its one condition: the credit below. If you use Pepicons commercially and want to support its authors, upstream asks for a one-time sponsorship at the link above.
 
 **Credit (CC BY 4.0).** Icons from [Pepicons](https://pepicons.com) by CyCraft, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changes: SVGs sanitised and renamed with a `-pop`, `-print` or `-pencil` suffix; no drawing was altered.
 
