@@ -603,7 +603,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - **Upstream**: [https://ix.siemens.io](https://ix.siemens.io), source [github.com/siemens/ix-icons](https://github.com/siemens/ix-icons)
 - **Author**: Siemens AG
 - **Vendored**: npm @siemens/ix-icons 3.7.1; laid out as svg/*.svg, unchanged names
-- **Licence**: MIT, `resources/assets/svg/licenses/siemens-ix/LICENSE`, read from LICENSE.md in the npm package on 2026-11-04, SHA-256 `42cb46c894aa9267307aa4985f40f44ba669e54d9b6b487960ecd24e1989213b`
+- **Licence**: MIT, `resources/assets/svg/licenses/siemens-ix/LICENSE.md`, read from LICENSE.md in the npm package on 2026-11-04, SHA-256 `42cb46c894aa9267307aa4985f40f44ba669e54d9b6b487960ecd24e1989213b`
 
 ```text
 MIT License
@@ -622,7 +622,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - **Upstream**: [https://garden.zendesk.com](https://garden.zendesk.com), source [github.com/zendeskgarden/svg-icons](https://github.com/zendeskgarden/svg-icons)
 - **Author**: Zendesk
 - **Vendored**: npm @zendeskgarden/svg-icons 8.4.0; laid out as src/16 and src/12 flattened to <name>-16 / <name>-12
-- **Licence**: Apache-2.0, `resources/assets/svg/licenses/garden/LICENSE`, read from LICENSE.md in the npm package on 2026-11-04, SHA-256 `46ae5f0dc2e06a18cde8b06bdb45abea0b6e28d169e6eff2069536780304cf6e`
+- **Licence**: Apache-2.0, `resources/assets/svg/licenses/garden/LICENSE.md`, read from LICENSE.md in the npm package on 2026-11-04, SHA-256 `46ae5f0dc2e06a18cde8b06bdb45abea0b6e28d169e6eff2069536780304cf6e`
 
 9.0.0 exists only as a pre-release (next); the stable 8.4.0 is pinned.
 
@@ -1552,7 +1552,7 @@ Creative Commons may be contacted at creativecommons.org.
 - **Upstream**: [https://game-icons.net](https://game-icons.net), source [github.com/game-icons/icons](https://github.com/game-icons/icons)
 - **Author**: Lorc, Delapouite and the game-icons.net contributors
 - **Vendored**: commit 82d948812b (master; upstream has no tags); laid out as <contributor>/<name>.svg, one directory per contributor so every icon stays attributable
-- **Licence**: CC BY 3.0, `resources/assets/svg/licenses/game-icons/LICENSE`, read from license.txt at commit 82d948812b on 2026-11-04, SHA-256 `fac95252798668fab5ea2cb08338f2ebc6bf894a72b19a15af1ca62f0a6d2e79`
+- **Licence**: CC BY 3.0, `resources/assets/svg/licenses/game-icons/license.txt`, read from license.txt at commit 82d948812b on 2026-11-04, SHA-256 `fac95252798668fab5ea2cb08338f2ebc6bf894a72b19a15af1ca62f0a6d2e79`
 
 badges/ (59) and various-artists/ (2) are not vendored: license.txt does not name them, so no licence is stated for them.
 
@@ -1957,7 +1957,7 @@ express Statement of Purpose.
 - **Upstream**: [https://svgporn.com](https://svgporn.com), source [github.com/gilbarbara/logos](https://github.com/gilbarbara/logos)
 - **Author**: Gil Barbara
 - **Vendored**: commit 22f03ffc4a (main; upstream has no releases); laid out as logos/*.svg, unchanged names
-- **Licence**: CC0-1.0, `resources/assets/svg/licenses/svg-logos/LICENSE`, read from LICENSE.txt at commit 22f03ffc4a on 2026-11-04, SHA-256 `36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673`
+- **Licence**: CC0-1.0, `resources/assets/svg/licenses/svg-logos/LICENSE.txt`, read from LICENSE.txt at commit 22f03ffc4a on 2026-11-04, SHA-256 `36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673`
 
 **Trademarks.** Logos in this set depict trademarks of their owners. The licence covers the drawings, not the marks: using a logo is governed by its owner's brand rules, and implies no endorsement.
 
@@ -2089,7 +2089,7 @@ For more information, please see
 
 The repository's root LICENSE is OFL-1.1 and covers the fonts; the SVG directory carries its own LICENSE, the Apache 2.0 notice, which is what governs these files. 170 SVGs are not vendored: they declare Adobe Illustrator entities in an internal DTD, which the sanitiser cannot parse, so they cannot be checked.
 
-Apache License 2.0, section 4(a), asks that a copy of the licence go with the files: it is in `resources/assets/svg/licenses/noto-emoji/LICENSE-2.0.txt`. No NOTICE file exists upstream.
+Apache License 2.0, section 4(a), asks that a copy of the licence go with the files: it is in `resources/assets/svg/pack-licenses/noto-emoji/LICENSE-2.0.txt`, which the pack supplies; upstream's `2D/svg/` ships only the short notice, and `licenses/noto-emoji/` holds exactly what upstream ships, because icon-sets-sync replaces that directory on every sync. No NOTICE file exists upstream.
 
 ```text
 Copyright 2013 Google, Inc. All Rights Reserved.

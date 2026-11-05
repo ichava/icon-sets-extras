@@ -39,8 +39,8 @@ pinned, refreshed or removed on its own.
 ## How a set gets in
 
 Its LICENSE is read at the version being pinned and must be MIT, Apache-2.0, ISC, CC0 or CC BY. The
-text ships beside the icons, and its SHA-256 is recorded in `config.json` and in
-`SetLicenceTest`, so a licence that changes upstream fails the suite instead of shipping. Every SVG
+text ships beside the icons in `resources/assets/svg/licenses/<set>/`, under the file name upstream
+gives it, and its SHA-256 is recorded in `config.json` and in `SetLicenceTest`, so a licence that changes upstream fails the suite instead of shipping. Every SVG
 then passes icon-sets-sync's SVG policy; a file the policy cannot parse is left out.
 
 ## Upstream

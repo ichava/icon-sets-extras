@@ -472,7 +472,7 @@
           "spdx": "MIT",
           "sha256": "42cb46c894aa9267307aa4985f40f44ba669e54d9b6b487960ecd24e1989213b",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/siemens-ix/LICENSE",
+          "file": "resources/assets/svg/licenses/siemens-ix/LICENSE.md",
           "read_from": "LICENSE.md in the npm package"
         },
         "attribution_required": false,
@@ -497,7 +497,7 @@
           "spdx": "Apache-2.0",
           "sha256": "46ae5f0dc2e06a18cde8b06bdb45abea0b6e28d169e6eff2069536780304cf6e",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/garden/LICENSE",
+          "file": "resources/assets/svg/licenses/garden/LICENSE.md",
           "read_from": "LICENSE.md in the npm package"
         },
         "attribution_required": false,
@@ -708,7 +708,7 @@
           "spdx": "CC-BY-3.0",
           "sha256": "fac95252798668fab5ea2cb08338f2ebc6bf894a72b19a15af1ca62f0a6d2e79",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/game-icons/LICENSE",
+          "file": "resources/assets/svg/licenses/game-icons/license.txt",
           "read_from": "license.txt at commit 82d948812b"
         },
         "attribution_required": true,
@@ -788,7 +788,7 @@
           "spdx": "CC0-1.0",
           "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/svg-logos/LICENSE",
+          "file": "resources/assets/svg/licenses/svg-logos/LICENSE.txt",
           "read_from": "LICENSE.txt at commit 22f03ffc4a"
         },
         "attribution_required": false,
