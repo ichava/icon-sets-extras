@@ -12,7 +12,7 @@ function extras_root(): string
     return dirname(__DIR__, 2);
 }
 
-/** @return array<string, string> set => SHA-256 of its LICENSE, read 2026-11-04 */
+/** @return array<string, string> set => SHA-256 of its licence file, read 2026-11-04 */
 function extras_licence_hashes(): array
 {
     return [
@@ -39,6 +39,44 @@ function extras_licence_hashes(): array
     ];
 }
 
+/**
+ * The exact files in each licenses/<set>/ directory. icon-sets-sync's licence sink
+ * deletes that directory and writes upstream's licence files back under their
+ * upstream names on every real sync, so anything else there would be lost and a
+ * renamed file would be written back under upstream's name. The three sets whose npm package
+ * ships no licence (ant-design, eva, pepicons) are not covered yet: the sink deletes
+ * their directory on a real sync unless it holds a SOURCE.md, and that marker is
+ * still to be added. Names here are what a dry run of each
+ * set's recipe reports as would_write (icon-sets-sync 06b17d7, 2026-11-04).
+ *
+ * @return array<string, list<string>>
+ */
+function extras_licence_files(): array
+{
+    return [
+        'radix-icons'  => ['LICENSE'],
+        'feather'      => ['LICENSE'],
+        'boxicons'     => ['LICENSE'],
+        'iconpark'     => ['LICENSE'],
+        'mingcute'     => ['LICENSE'],
+        'tdesign'      => ['LICENSE'],
+        'siemens-ix'   => ['LICENSE.md'],
+        'garden'       => ['LICENSE.md'],
+        'coolicons'    => ['LICENSE'],
+        'eva'          => ['LICENSE'],
+        'ant-design'   => ['LICENSE'],
+        'health-icons' => ['LICENSE'],
+        'devicon'      => ['LICENSE'],
+        'fluent-emoji' => ['LICENSE'],
+        'pepicons'     => ['LICENSE'],
+        'game-icons'   => ['license.txt'],
+        'coreui'       => ['LICENSE'],
+        'pinhead'      => ['LICENSE'],
+        'svg-logos'    => ['LICENSE.txt'],
+        'noto-emoji'   => ['LICENSE'],
+    ];
+}
+
 /** @return array<string, mixed> */
 function extras_config(): array
 {
@@ -49,7 +87,9 @@ it(description: 'ships each set licence unchanged since it was read', closure: f
     expect(extras_licence_hashes())->toHaveCount(20);
 
     foreach (extras_licence_hashes() as $set => $hash) {
-        $file = extras_root() . "/resources/assets/svg/licenses/{$set}/LICENSE";
+        $relative = extras_config()['upstream']['sets'][$set]['license']['file'];
+        expect($relative)->toStartWith("resources/assets/svg/licenses/{$set}/");
+        $file = extras_root() . '/' . $relative;
         expect(is_file($file))->toBeTrue("missing licence for {$set}");
         expect(hash_file('sha256', $file))->toBe($hash, "the {$set} licence changed; read it before shipping");
         expect(extras_config()['upstream']['sets'][$set]['license']['sha256'])->toBe($hash);
@@ -76,4 +116,26 @@ it(description: 'credits every set in ATTRIBUTION.md, with author and licence fo
             expect(str_contains($text, $entry['owner']))->toBeTrue("ATTRIBUTION.md does not name the author of {$set}");
         }
     }
+});
+
+it(description: 'keeps exactly the files a sync writes in each licence directory', closure: function () {
+    expect(extras_licence_files())->toHaveCount(20)
+        ->and(array_keys(extras_licence_files()))->toEqualCanonicalizing(array_keys(extras_licence_hashes()));
+
+    foreach (extras_licence_files() as $set => $expected) {
+        $dir = extras_root() . "/resources/assets/svg/licenses/{$set}";
+        $files = array_values(array_diff(scandir($dir) ?: [], ['.', '..']));
+        sort($files);
+
+        expect($files)->toBe($expected, "licenses/{$set}/ holds a file a sync would delete or rename");
+        expect(basename(extras_config()['upstream']['sets'][$set]['license']['file']))->toBeIn($expected);
+    }
+});
+
+it(description: 'ships the full Apache-2.0 text for Noto Emoji outside the directory the sync replaces', closure: function () {
+    $file = extras_root() . '/resources/assets/svg/pack-licenses/noto-emoji/LICENSE-2.0.txt';
+
+    expect(is_file($file))->toBeTrue()
+        ->and((string) file_get_contents($file))->toContain('Version 2.0, January 2004');
+    $this->assertStringContainsString('resources/assets/svg/pack-licenses/noto-emoji/LICENSE-2.0.txt', (string) file_get_contents(extras_root() . '/ATTRIBUTION.md'));
 });

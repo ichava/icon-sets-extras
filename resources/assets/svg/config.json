@@ -307,7 +307,7 @@
           "source_path": "packages/radix-icons/icons",
           "_version_note": "archive tag is website@0.0.17; the icons package inside it is 1.3.2"
         },
-        "current_version": "1.3.2",
+        "current_version": "0.0.17",
         "ref": "tag website@0.0.17 (bde33b13aa), packages/radix-icons 1.3.2",
         "version_check_url": "https://api.github.com/repos/radix-ui/icons/tags",
         "license": {
@@ -472,7 +472,7 @@
           "spdx": "MIT",
           "sha256": "42cb46c894aa9267307aa4985f40f44ba669e54d9b6b487960ecd24e1989213b",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/siemens-ix/LICENSE",
+          "file": "resources/assets/svg/licenses/siemens-ix/LICENSE.md",
           "read_from": "LICENSE.md in the npm package"
         },
         "attribution_required": false,
@@ -497,7 +497,7 @@
           "spdx": "Apache-2.0",
           "sha256": "46ae5f0dc2e06a18cde8b06bdb45abea0b6e28d169e6eff2069536780304cf6e",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/garden/LICENSE",
+          "file": "resources/assets/svg/licenses/garden/LICENSE.md",
           "read_from": "LICENSE.md in the npm package"
         },
         "attribution_required": false,
@@ -708,7 +708,7 @@
           "spdx": "CC-BY-3.0",
           "sha256": "fac95252798668fab5ea2cb08338f2ebc6bf894a72b19a15af1ca62f0a6d2e79",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/game-icons/LICENSE",
+          "file": "resources/assets/svg/licenses/game-icons/license.txt",
           "read_from": "license.txt at commit 82d948812b"
         },
         "attribution_required": true,
@@ -788,7 +788,7 @@
           "spdx": "CC0-1.0",
           "sha256": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
           "checked_at": "2026-11-04",
-          "file": "resources/assets/svg/licenses/svg-logos/LICENSE",
+          "file": "resources/assets/svg/licenses/svg-logos/LICENSE.txt",
           "read_from": "LICENSE.txt at commit 22f03ffc4a"
         },
         "attribution_required": false,
@@ -1008,8 +1008,8 @@
     },
     "update_command": {
       "type": "recipe",
-      "recipe": "manifest-pack",
-      "_note": "icon-sets-sync has no config for this pack yet. Its manifest-pack recipe refreshes npm-sourced sets only; the github-archive sets (radix-icons, iconpark, mingcute, coolicons, fluent-emoji, game-icons, svg-logos, noto-emoji) need it extended."
+      "recipe": "icon-sets-extras.<set>",
+      "_note": "Each set has its own icon-sets-sync recipe, icon-sets-extras.<set> (icon-sets-sync#88), which refreshes files/<set>/ and licenses/<set>/ and stamps upstream.sets.<set>.current_version."
     }
   },
   "license": {
