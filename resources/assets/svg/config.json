@@ -290,7 +290,7 @@
   "upstream": {
     "source": {
       "type": "manifest",
-      "_note": "One upstream per set, under upstream.sets. Each has its own recipe in the design folder (pack-recipes/icon-sets-extras.<set>.json)."
+      "_note": "One upstream per set, under upstream.sets. Each has its own icon-sets-sync config, config/icon-sets-extras-<set>.json."
     },
     "license": "per set",
     "sets": {
@@ -1008,8 +1008,8 @@
     },
     "update_command": {
       "type": "recipe",
-      "recipe": "icon-sets-extras.<set>",
-      "_note": "Each set has its own icon-sets-sync recipe, icon-sets-extras.<set> (icon-sets-sync#88), which refreshes files/<set>/ and licenses/<set>/ and stamps upstream.sets.<set>.current_version."
+      "recipe": "icon-sets-extras-<set>",
+      "_note": "Each set has its own icon-sets-sync recipe, icon-sets-extras-<set> (icon-sets-sync#88; named icon-sets-extras.<set> until icon-sets-sync#104, which still accepts the old name), which refreshes files/<set>/ and licenses/<set>/ and stamps upstream.sets.<set>.current_version."
     }
   },
   "license": {
