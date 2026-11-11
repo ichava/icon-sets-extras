@@ -1009,7 +1009,7 @@
     "update_command": {
       "type": "recipe",
       "recipe": "icon-sets-extras-<set>",
-      "_note": "Each set has its own icon-sets-sync recipe, icon-sets-extras-<set> (icon-sets-sync#88; named icon-sets-extras.<set> until icon-sets-sync#104, which still accepts the old name), which refreshes files/<set>/ and licenses/<set>/ and stamps upstream.sets.<set>.current_version."
+      "_note": "Each set has its own icon-sets-sync recipe, icon-sets-extras-<set> (icon-sets-sync#88, renamed from the dotted form in icon-sets-sync#104), which refreshes files/<set>/ and licenses/<set>/ and stamps upstream.sets.<set>.current_version."
     }
   },
   "license": {
