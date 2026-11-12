@@ -518,21 +518,21 @@
           "archive_url": "https://github.com/krystonschwarze/coolicons/archive/refs/tags/v{version}.tar.gz",
           "source_path": "icons/svg"
         },
-        "current_version": "5.2.0",
-        "ref": "tag v5.2.0",
+        "current_version": "5.3.0",
+        "ref": "tag v5.3.0",
         "version_check_url": "https://api.github.com/repos/krystonschwarze/coolicons/tags",
         "license": {
           "spdx": "MIT",
           "sha256": "35d8a4a8e1793b261198949d213583904b11e3826be8618ae9b9dbc6b70f50cc",
-          "checked_at": "2026-11-04",
+          "checked_at": "2026-11-12",
           "file": "resources/assets/svg/licenses/coolicons/LICENSE",
-          "read_from": "LICENSE at tag v5.2.0"
+          "read_from": "LICENSE at tag v5.3.0"
         },
         "attribution_required": false,
         "trademarks": false,
-        "icons": 2648,
+        "icons": 3100,
         "layout": "icons/svg/{line,fill}/regular/*.svg flattened to <name>-line / <name>-fill",
-        "note": "v5 ships 1,324 icons in 15 style folders (line, fill, bulk, duotone, duocolor x regular, round, sharp): 19,860 files. Only line and fill at regular corners are vendored (2,648), to keep the bundle small; the other 13 folders are the same drawings restyled. v4 was CC-BY-4.0; v5 is MIT."
+        "note": "v5.3.0 ships 1,550 icons in 15 style folders (line, fill, bulk, duotone, duocolor x regular, round, sharp): 23,250 files. Only line and fill at regular corners are vendored (3,100), to keep the bundle small; the other 13 folders are the same drawings restyled. v4 was CC-BY-4.0; v5 is MIT."
       },
       "eva": {
         "name": "Eva Icons",

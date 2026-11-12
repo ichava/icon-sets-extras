@@ -23,7 +23,7 @@ Every set was taken at a pinned version, and its licence was read at that versio
 | `tdesign` | [TDesign Icons](https://tdesign.tencent.com) | TDesign (Tencent) | MIT | npm tdesign-icons-svg 0.4.8 | 2,358 |
 | `siemens-ix` | [Siemens iX Icons](https://ix.siemens.io) | Siemens AG | MIT | npm @siemens/ix-icons 3.7.1 | 1,490 |
 | `garden` | [Zendesk Garden Icons](https://garden.zendesk.com) | Zendesk | Apache-2.0 | npm @zendeskgarden/svg-icons 8.4.0 | 932 |
-| `coolicons` | [coolicons](https://coolicons.cool) | Kryston Schwarze | MIT | tag v5.2.0 | 2,648 |
+| `coolicons` | [coolicons](https://coolicons.cool) | Kryston Schwarze | MIT | tag v5.3.0 | 3,100 |
 | `eva` | [Eva Icons](https://akveo.github.io/eva-icons) | Akveo | MIT | npm eva-icons 1.1.3 (tag v1.1.3) | 490 |
 | `ant-design` | [Ant Design Icons](https://ant.design/components/icon) | Ant UED | MIT | npm @ant-design/icons-svg 4.6.0 (repo commit 7f2516ac91) | 848 |
 | `health-icons` | [Health Icons](https://healthicons.org) | Resolve to Save Lives and the Health Icons contributors | CC0-1.0 | npm healthicons 3.1.0 | 1,552 |
@@ -809,10 +809,10 @@ END OF TERMS AND CONDITIONS
 
 - **Upstream**: [https://coolicons.cool](https://coolicons.cool), source [github.com/krystonschwarze/coolicons](https://github.com/krystonschwarze/coolicons)
 - **Author**: Kryston Schwarze
-- **Vendored**: tag v5.2.0; laid out as icons/svg/{line,fill}/regular/*.svg flattened to <name>-line / <name>-fill
-- **Licence**: MIT, `resources/assets/svg/licenses/coolicons/LICENSE`, read from LICENSE at tag v5.2.0 on 2026-11-04, SHA-256 `35d8a4a8e1793b261198949d213583904b11e3826be8618ae9b9dbc6b70f50cc`
+- **Vendored**: tag v5.3.0; laid out as icons/svg/{line,fill}/regular/*.svg flattened to <name>-line / <name>-fill
+- **Licence**: MIT, `resources/assets/svg/licenses/coolicons/LICENSE`, read from LICENSE at tag v5.3.0 on 2026-11-12 (unchanged since v5.2.0), SHA-256 `35d8a4a8e1793b261198949d213583904b11e3826be8618ae9b9dbc6b70f50cc`
 
-v5 ships 1,324 icons in 15 style folders (line, fill, bulk, duotone, duocolor x regular, round, sharp): 19,860 files. Only line and fill at regular corners are vendored (2,648), to keep the bundle small; the other 13 folders are the same drawings restyled. v4 was CC-BY-4.0; v5 is MIT.
+v5.3.0 ships 1,550 icons in 15 style folders (line, fill, bulk, duotone, duocolor x regular, round, sharp): 23,250 files. Only line and fill at regular corners are vendored (3,100), to keep the bundle small; the other 13 folders are the same drawings restyled. v4 was CC-BY-4.0; v5 is MIT.
 
 ```text
 MIT License
