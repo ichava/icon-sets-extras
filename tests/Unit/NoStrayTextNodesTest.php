@@ -18,5 +18,5 @@ use Simtabi\Laranail\Ichava\Testing\PackConformance;
 */
 
 it('has no text node directly under svg or g in any icon', function (): void {
-    PackConformance::noStrayTextNodes(dirname(__DIR__, 2) . '/resources/assets/svg/files', minFiles: 43561);
+    PackConformance::noStrayTextNodes(dirname(__DIR__, 2) . '/resources/assets/svg/files', minFiles: 44013);
 });

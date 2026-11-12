@@ -24,7 +24,7 @@ function extras_count_floor(): array
         'tdesign'      => 2358,
         'siemens-ix'   => 1490,
         'garden'       => 932,
-        'coolicons'    => 2648,
+        'coolicons'    => 3100,
         'eva'          => 490,
         'ant-design'   => 848,
         'health-icons' => 1552,

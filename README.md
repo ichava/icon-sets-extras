@@ -7,7 +7,7 @@
 
 The MIT badge is the package code. The icons keep their own licences, per set, in [ATTRIBUTION.md](ATTRIBUTION.md).
 
-> 20 smaller open-licence icon, logo and emoji sets for the Ichava Laravel icon ecosystem: 43,561 SVGs, one directory per set, each set under its own MIT, Apache-2.0, CC0 or CC BY licence.
+> 20 smaller open-licence icon, logo and emoji sets for the Ichava Laravel icon ecosystem: 44,013 SVGs, one directory per set, each set under its own MIT, Apache-2.0, CC0 or CC BY licence.
 
 Requires [`ichava/core`](https://github.com/ichava/core) `^0.1` on PHP `^8.4.1 || ^8.5` and Laravel `^13`.
 
@@ -23,7 +23,7 @@ composer require ichava/icon-sets-extras
 
 The service provider is discovered automatically. Core's [installation guide](https://github.com/ichava/core/blob/main/docs/installation.md) covers core's own setup.
 
-The pack is large: 43,561 files, about 117 MB of SVG. If you need one set, a set's own pack is lighter where one exists.
+The pack is large: 44,013 files, about 117 MB of SVG. If you need one set, a set's own pack is lighter where one exists.
 
 ## Quick start guide and usage
 
